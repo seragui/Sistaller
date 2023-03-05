@@ -1,0 +1,40 @@
+<h1>Departamento</h1>
+<a href="{% url 'empleado:crear_departamento'%}">Crear Departamento</a>
+
+{% if departamentos %}
+
+<div class="container">
+  <h3 id="Ingreso">Gestion de Departamentos</h3>
+  <table id="table_citas" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nombre del Departamento</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for departamento in departamentos %}
+      <tr>
+        <td>{{departamento.id_departamento}}</td>
+        <td>{{departamento.nombre_departamento}}</td>
+        <td>
+          <a
+            href="{% url 'empleado:editar_departamento' departamento.id_departamento %}"
+            >Actualizar</a
+          >
+          <a
+            href="{% url 'empleado:eliminar_departamento' departamento.id_departamento %}"
+            >Eliminar</a
+          >
+        </td>
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% else %}
+  <h1>No existen departamentos registrados</h1>
+  {% endif %}
+</div>
