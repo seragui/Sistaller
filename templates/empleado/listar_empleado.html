@@ -30,8 +30,8 @@
       <td>{{empleado.id_cargo}}</td>
       <td>{{empleado.id_departamento}}</td>
       <td>
-        <a href="{% url 'empleado:editar_empleado' empleado.idempleado %}">Actualizar</a>
-        <a href="{% url 'empleado:eliminar_empleado' empleado.idempleado %}">Eliminar</a>
+        <a href="{% url 'empleado:editar_empleado' empleado.idempleado %}" class="btn btn-warning">Actualizar</a>
+        <a href="{% url 'empleado:eliminar_empleado' empleado.idempleado %}" class="btn btn-danger">Eliminar</a>
       </td>
     </tr>
 

@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('empleados/',include(('Empleados.urls','empleado'))),
     path('',Inicio.as_view(), name = 'index'),
+    path('materiales/',include(('Material.urls','material'))),
 
 ]

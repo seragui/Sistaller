@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container">
-  <h3><b>Ingresar Cargo</b></h3>
+  <h3><b>Ingresar material</b></h3>
   <br>
   <hr>
   <div class="row">
@@ -10,8 +10,8 @@
       <form method="POST" action="" class="con">
         {% csrf_token %} 
         <p>
-            <label for="id_nombre_cargo">Nombre del Cargo:</label>
-            <input type="text" name="nombre_cargo" class="form-control" maxlength="50" required="" id="id_nombre_cargo">
+            <label for="id_nombre_material">Nombre del Material:</label>
+            <input type="text" name="nombre_material" class="form-control" maxlength="50" required="" id="id_nombre_material">
           </p>
         <div class="float-right">
           <button type="submit" class="btn btn-primary">Crear</button>
