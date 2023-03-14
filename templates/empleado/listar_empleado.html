@@ -1,7 +1,14 @@
-{% if empleados %}
-   
+{% extends "index.html" %}
+
+{% block title %}Gestionar Empleados{% endblock %}
+
+
+{% block content%}
+
+{% if empleados %}   
 <div class="container">
-  <h3 id="Ingreso">Gestion de Empledados</h3>
+  <h3 id="Ingreso">Gestion de Empleados</h3>
+  <a class="btn btn-success" href="{% url 'empleado:crear_empleado' %}">Ingresar Empleado</a>
 <table id="table_consulta" class="table table-striped table-bordered">
   <thead>
     <tr>
@@ -35,3 +42,4 @@
 {% else %}
 <h1>No existen Consultas registradas</h1>
 {% endif %}
+{% endblock %}
