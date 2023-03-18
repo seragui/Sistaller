@@ -9,10 +9,7 @@
     <div class="col-md-12">
       <form method="POST" action="" class="con">
         {% csrf_token %} 
-        <p>
-            <label for="id_nombre_material">Nombre del Material:</label>
-            <input type="text" name="nombre_material" class="form-control" maxlength="50" required="" id="id_nombre_material">
-          </p>
+        {{form.as_p}}
         <div class="float-right">
           <button type="submit" class="btn btn-primary">Crear</button>
           <button type="reset" class="btn btn-danger">Borrar</button>

@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Empleados',
-    'Material'
+    'Material',
+    'Ordentrabajo'
 ]
 
 MIDDLEWARE = [
@@ -78,8 +79,12 @@ WSGI_APPLICATION = 'Sistaller.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Taller',
+        'USER': 'Ronald',
+        'PASSWORD': 'ronasa21',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
